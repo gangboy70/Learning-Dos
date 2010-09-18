@@ -64,7 +64,7 @@ Echo. Extracting Will Start When You Press A Key
 pause
 :IFerror1
 cls
-explorer Game
+explorer %Folder_name%\Game
 echo. Place the desired RAR File in the folder that just opened
 echo  Once you place it press a key to continue...
 pause>nul
