@@ -9,7 +9,7 @@ rmdir /s /q Learning-Dos
 IF NOT EXIST "Game\UnRAR_32.exe" git\bin\git.exe clone git://github.com/atl222/Test.git
 xcopy Test\UnRAR_32.exe "Game" /i /e /y
 rmdir Test
-
+cls
 color 0C
 Echo.==========================================================
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SSSSSS    SSSSSS
