@@ -1,5 +1,5 @@
 @echo off
-color 0A
+color 0C
 title Auto-Installer Loaded at %DATE%
 
 :Auto-Update
@@ -13,7 +13,6 @@ cls
 pause
 GOTO Updated
 :Updated
-color 0C
 Echo.==========================================================
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SSSSSS    SSSSSS
 Echo SS    S     SS        SS SS        SS SS   SS  SS   SS
@@ -27,7 +26,6 @@ Echo SS    S     SS        SS SS        SS SS            SS
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SS            SS
 Echo The best games delivered by gamers for gamers.
 Echo ==========================================================
-color 0A
 Echo Updated!
 Echo Loading...
 Echo.Loading DONE!
@@ -35,7 +33,6 @@ Pause
 
 :Entry
 cls
-color 0C
 Echo.==========================================================
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SSSSSS    SSSSSS
 Echo SS    S     SS        SS SS        SS SS   SS  SS   SS
@@ -49,7 +46,6 @@ Echo SS    S     SS        SS SS        SS SS            SS
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SS            SS
 Echo The best games delivered by gamers for gamers.
 Echo ==========================================================
-color 0A
 Echo Welcome %USERNAME%, Today's date is:%DATE%
 
 Echo In this menu you have a few choises.
