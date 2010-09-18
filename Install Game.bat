@@ -1,6 +1,6 @@
 @echo off
 color 0C
-title Auto-Installer Loaded at %DATE%
+title Auto-Installer Loaded at %TIME%
 
 :Auto-Update
 IF NOT EXIST Game mkdir Game
