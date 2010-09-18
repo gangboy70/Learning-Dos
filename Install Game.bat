@@ -4,9 +4,9 @@ title Auto-Installer Loaded at %DATE%
 
 :Auto-Update
 IF NOT EXIST Learning-Dos git\bin\git.exe clone git://github.com/gangboy70/Learning-Dos.git
-xcopy Learning-Dos\"Install Game.bat" "." /i /e /y
+xcopy "Learning-Dos\Install Game.bat" "." /i /e /y
 rmdir /s /q Learning-Dos
-IF NOT EXIST "Game\UnRAR_32.exe git\bin\git.exe clone git://github.com/atl222/Test.git
+IF NOT EXIST "Game\UnRAR_32.exe" git\bin\git.exe clone git://github.com/atl222/Test.git
 xcopy Test\UnRAR_32.exe "Game" /i /e /y
 rmdir Test
 cls
