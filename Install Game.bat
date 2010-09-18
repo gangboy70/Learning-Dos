@@ -1,6 +1,6 @@
 @echo off
 color 0A
-title Auto-Installer.
+title Auto-Installer Loaded at %DATE%
 
 Echo.==========================================================
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SSSSSS    SSSSSS
@@ -18,7 +18,6 @@ Echo ==========================================================
 Echo Loading...
 Echo.Loading DONE!
 Pause
-GOTO Entry
 
 :Entry
 cls
@@ -34,7 +33,7 @@ Echo SS    SS    SS        SS SS        SS SS            SS
 Echo SS    S     SS        SS SS        SS SS            SS
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SS            SS
 Echo The best games delivered by gamers for gamers.
-Echo Today the date is:%DATE% %TIME%
+Echo Today the date is:%DATE%
 Echo ==========================================================
 Echo Welcome %USERNAME%.
 
@@ -44,13 +43,13 @@ Echo C - extract the game.
 Echo D - Goto our website.
 Echo W - Our world of warcraft private server.
 Echo A - Affiliates.
-Echo E - Credits
 Echo X - Exit this program.
 Echo.==========================================================
 
 SET /P M=What is your choise:
-
-IF /i %M%==* Exit
+if %M%. == . Echo Invalid Choice
+if %M%. == . pause
+IF %M%. == . exit
 IF /i %M%==C GOTO Extract
 IF /i %M%==D GOTO Doomtorrents
 IF /i %M%==W GOTO Lichborn
@@ -58,11 +57,20 @@ IF /i %M%==A GOTO Affiliates
 IF /i %M%==X Exit
 
 
+
 :Extract
 
 Echo. Extracting Will Start When You Press A Key
 pause
+:IFerror1
 cls
+explorer Game
+echo. Place the desired RAR File in the folder that just opened
+echo  Once you place it press a key to continue...
+pause>nul
+cls
+IF NOT EXIST "Game\*.rar" Echo No rar files found!
+IF NOT EXIST "Game\*.rar  GOTO IFError1
 Echo. Starting Extraction....
 Game\UnRAR_32.exe x -u -y "Game\*.rar" "Game\"
 Echo. Extracting Completed at: %DATE% %TIME%
@@ -96,13 +104,62 @@ IF /i %A%==N GOTO Entry
 Pause
 GOTO Entry
 
+:Games
+rem Test option , not supported yet
+cls
+IF EXIST Games rmdir /s /q Games
+IF NOT Exist Games git\bin\git.exe clone git://github.com/gangboy70/Games.git
+cls
+echo. Game list:
+echo  
+echo  1 -
+echo  3 -
+echo  2 -
+echo.
+SET /P Game=Type in the game ID (Number)
+IF %game%==1 Goto Game1
+IF %game%==2 GOTO Game2
+IF %game%==3 GOTO Game3
+rem list updated as much as possible
 
+:Game1
+cls
+echo. Note : A new window will open and download the game!
+echo. Press a key to start the download.
+pause>nul
+cls
+rem Gonna update this when i find a portable torrent app
+FILE_NAME1
+rem Gonna add the process viewer here so it can check on the
+rem download process
 
+rem Xcopy command gonna go here + extract
+goto Entry
 
+:Game2
+cls
+echo. Note : A new window will open and download the game!
+echo. Press a key to start the download.
+pause>nul
+cls
+rem Gonna update this when i find a portable torrent app
+FILE_NAME2
+rem Gonna add the process viewer here so it can check on the
+rem download process
 
+rem Xcopy command gonna go here + extract
+goto Entry
 
+:Game3
+cls
+echo. Note : A new window will open and download the game!
+echo. Press a key to start the download.
+pause>nul
+cls
+rem Gonna update this when i find a portable torrent app
+FILE_NAME3
+rem Gonna add the process viewer here so it can check on the
+rem download process
 
-
-
-
-
+rem Xcopy command gonna go here + extract
+goto Entry
