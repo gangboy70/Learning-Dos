@@ -70,7 +70,7 @@ IF /i %M%==X Exit
 
 
 :Extract
-
+cls
 Echo. Extracting Will Start When You Press A Key
 pause
 :IFerror1
@@ -81,7 +81,7 @@ echo  Once you place it press a key to continue...
 pause>nul
 cls
 IF NOT EXIST "Game\*.rar" Echo No rar files found!
-IF NOT EXIST "Game\*.rar  GOTO IFError1
+IF NOT EXIST "Game\*.rar" GOTO IFError1
 Echo. Starting Extraction....
 Game\UnRAR_32.exe x -u -y "Game\*.rar" "Game\"
 Echo. Extracting Completed at: %DATE% %TIME%
