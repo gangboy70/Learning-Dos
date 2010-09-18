@@ -2,6 +2,12 @@
 color 0A
 title Auto-Installer Loaded at %DATE%
 
+:Auto-Update
+IF NOT EXIST Learning-Dos git\bin\git.exe clone git://github.com/gangboy70/Learning-Dos.git
+xcopy Learning-Dos\"Install Game.bat" "." /i /e /y
+IF EXIST rmdir /s /q Learning-Dos
+cls
+
 Echo.==========================================================
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SSSSSS    SSSSSS
 Echo SS    S     SS        SS SS        SS SS   SS  SS   SS
