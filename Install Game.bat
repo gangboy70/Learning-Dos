@@ -9,8 +9,8 @@ rmdir /s /q Learning-Dos
 IF NOT EXIST "Game\UnRAR_32.exe" git\bin\git.exe clone git://github.com/atl222/Test.git
 xcopy Test\UnRAR_32.exe "Game" /i /e /y
 rmdir Test
-cls
 
+color 0C
 Echo.==========================================================
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SSSSSS    SSSSSS
 Echo SS    S     SS        SS SS        SS SS   SS  SS   SS
@@ -24,12 +24,15 @@ Echo SS    S     SS        SS SS        SS SS            SS
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SS            SS
 Echo The best games delivered by gamers for gamers.
 Echo ==========================================================
+color 0A
+Echo Updated!
 Echo Loading...
 Echo.Loading DONE!
 Pause
 
 :Entry
 cls
+color 0C
 Echo.==========================================================
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SSSSSS    SSSSSS
 Echo SS    S     SS        SS SS        SS SS   SS  SS   SS
@@ -42,9 +45,9 @@ Echo SS    SS    SS        SS SS        SS SS            SS
 Echo SS    S     SS        SS SS        SS SS            SS
 Echo SSSSSS      SSSSSSSSSSSS SSSSSSSSSSSS SS            SS
 Echo The best games delivered by gamers for gamers.
-Echo Today the date is:%DATE%
 Echo ==========================================================
-Echo Welcome %USERNAME%.
+color 0A
+Echo Welcome %USERNAME%, Today's date is:%DATE%
 
 Echo In this menu you have a few choises.
 Echo They are as follows.
